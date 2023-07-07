@@ -1,31 +1,31 @@
 # PoliceAPI_Client
 A C# Wrapper around the Police API (data.police.uk).
 
-#Introduction
+# Introduction
 
 The Police Data API Wrapper is a convenient C# library that simplifies access to the Data Police UK API.
 The Data Police UK API provides comprehensive data related to police forces, neighborhoods, and actual crimes. 
 By leveraging this wrapper, developers can easily integrate police data into their C# applications. 
 The official documentation for the Data Police UK API can be found here.
 
-#Getting Started
+# Getting Started
 
-##Installation
+## Installation
 
 To begin using the Police Data API Wrapper, you can install the NuGet package using one of the following methods:
 
-###Package Manager Console:
+### Package Manager Console:
 Install-Package PoliceAPI_Client
 
-###.NET CLI:
+### .NET CLI:
 dotnet add package PoliceAPI_Client
 
-###Visual Studio:
+### Visual Studio:
 Right-click on your project in the Solution Explorer.
 Select "Manage NuGet Packages."
 Search for "PoliceAPI_Client" and click "Install."
 
-##Authentication
+## Authentication
 The Data Police UK API no longer requires authentication to access its data. 
 You can freely make API calls without the need for an API key or any authentication mechanism. 
 This wrapper provides a convenient way to interact with the API and retrieve information about police forces, neighborhoods, and actual crimes. 
