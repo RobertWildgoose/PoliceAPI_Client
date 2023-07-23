@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using PoliceAPI_Client.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +48,14 @@ namespace PoliceAPI_Client.Common
                     Console.WriteLine($"Error: {ex.Message}");
                     return null;
                 }
+            }
+        }
+
+        public void ValidateStringParameter(string value, string key)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                throw new MissingParameterException(key);
             }
         }
     }

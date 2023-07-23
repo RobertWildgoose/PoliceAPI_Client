@@ -1,48 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PoliceAPI_Client.Common;
+using PoliceAPI_Client.Models;
 using PoliceAPI_Client.Services.Interfaces;
 
 namespace PoliceAPI_Client.Services.Implementations
 {
     public class CrimeService : BaseService, ICrimeService
     {
-        public Task<string> GetCrimeCategories()
+        public async Task<IEnumerable<StreetLevelCrime>> GetStreetLevelCrimes(SpecificLocation coordinate, string date, string category = Constants.AllCrimes)
         {
-            throw new NotImplementedException();
+            var crimes = await GetList<StreetLevelCrime>($"crimes-street/{category}?{coordinate.ToString()}&date={date}");
+            return crimes;
         }
 
-        public Task<string> GetCrimesAtLocation()
+        public async Task<IEnumerable<StreetLevelCrime>> GetStreetLevelCrimes(LocationPolygon polygon, string date, string category = Constants.AllCrimes)
         {
-            throw new NotImplementedException();
+            var crimes = await GetList<StreetLevelCrime>($"crimes-street/{category}?poly={polygon}&date={date}");
+            return crimes;
         }
 
-        public Task<string> GetCrimesWithNoLocation()
+        public async Task<IEnumerable<StreetLevelOutcome>> GetStreetLevelOutcomes(string date, string locationId)
         {
-            throw new NotImplementedException();
+            var outcomes = await GetList<StreetLevelOutcome>($"crimes-street/outcomes-at-location?date={date}&location_id={locationId}");
+            return outcomes;
         }
 
-        public Task<string> GetLastUpdated()
+        public async Task<IEnumerable<StreetLevelOutcome>> GetStreetLevelOutcomes(string date, SpecificLocation coordinate)
         {
-            throw new NotImplementedException();
+            var outcomes = await GetList<StreetLevelOutcome>($"crimes-street/outcomes-at-location?date={date}&{coordinate.ToString()}");
+            return outcomes;
         }
 
-        public Task<string> GetOutcomesForSpecificCrime()
+        public async Task<IEnumerable<StreetLevelOutcome>> GetStreetLevelOutcomes(string date, LocationPolygon polygon)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<string> GetStreetLevelCrimes()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<string> GetStreetLevelOutcomes()
-        {
-            throw new NotImplementedException();
+            var outcomes = await GetList<StreetLevelOutcome>($"crimes-street/outcomes-at-location?date={date}&poly={polygon}");
+            return outcomes;
         }
     }
 }

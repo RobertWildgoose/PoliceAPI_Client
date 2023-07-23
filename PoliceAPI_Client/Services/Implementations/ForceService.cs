@@ -19,12 +19,14 @@ namespace PoliceAPI_Client.Services.Implementations
 
         public async Task<ForceDetails> GetSpecificForce(string id)
         {
+            ValidateStringParameter(id, "id");
             var forcedetails = await GetItem<ForceDetails>($"forces/{id}");
             return forcedetails;
         }
 
         public async Task<List<ForceSeniorOfficer>> GetForceSeniorOfficers(string id)
         {
+            ValidateStringParameter(id, "id");
             var forceSeniorOfficer = await GetList<ForceSeniorOfficer>($"forces/{id}/people");
             return forceSeniorOfficer;
         }

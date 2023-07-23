@@ -8,18 +8,11 @@ namespace PoliceAPI_Client.Models
 {
     public class CrimeLocation : SpecificLocation
     {
+        public CrimeLocation(float lat, float lon) : base(lat, lon)
+        {
+
+        }
+
         public CrimeStreet street { get; set; }
-    }
-
-    public class SpecificLocation
-    {
-        public string latitude { get; set; }
-        public string longitude { get; set; }
-    }
-
-    public class CrimeStreet
-    {
-        public string id { get; set; }
-        public string name { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PoliceAPI_Client.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +9,10 @@ namespace PoliceAPI_Client.Services.Interfaces
 {
     public interface ICrimeService
     {
-        public Task<string> GetStreetLevelCrimes();
-        public Task<string> GetStreetLevelOutcomes();
-        public Task<string> GetCrimesAtLocation();
-        public Task<string> GetCrimesWithNoLocation();
-        public Task<string> GetCrimeCategories();
-        public Task<string> GetLastUpdated();
-        public Task<string> GetOutcomesForSpecificCrime();
+        public Task<IEnumerable<StreetLevelCrime>> GetStreetLevelCrimes(SpecificLocation coordinate, string date, string category = "all-crime");
+        public Task<IEnumerable<StreetLevelCrime>> GetStreetLevelCrimes(LocationPolygon polygon, string date, string category = "all-crime");
+        public Task<IEnumerable<StreetLevelOutcome>> GetStreetLevelOutcomes(string date, string locationId);
+        public Task<IEnumerable<StreetLevelOutcome>> GetStreetLevelOutcomes(string date, SpecificLocation coordinate);
+        public Task<IEnumerable<StreetLevelOutcome>> GetStreetLevelOutcomes(string date, LocationPolygon polygon);
     }
 }

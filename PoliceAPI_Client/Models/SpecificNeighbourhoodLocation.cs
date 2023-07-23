@@ -8,6 +8,11 @@ namespace PoliceAPI_Client.Models
 {
     public class SpecificNeighbourhoodLocation : SpecificLocation
     {
+        public SpecificNeighbourhoodLocation(float lat, float lon) : base(lat, lon)
+        {
+
+        }
+
         public string name { get; set; }
         public string postcode { get; set; }
         public string address { get; set; }
