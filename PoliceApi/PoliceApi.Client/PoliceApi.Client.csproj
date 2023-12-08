@@ -15,6 +15,10 @@
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <Product>PoliceApi_Client</Product>
+    <FileVersion>1.0.6</FileVersion>
+    <Version>1.0.6</Version>
+    <Title>PoliceApi Client</Title>
+    <PackageId>PoliceApi_Client</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
