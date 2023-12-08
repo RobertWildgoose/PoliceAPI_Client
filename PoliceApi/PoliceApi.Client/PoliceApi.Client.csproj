@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Authors>PoliceAPI Client</Authors>
+    <Authors>Robert Wildgoose</Authors>
     <Company>Robert Wildgoose</Company>
     <Description>A wrapper around the UK Police Data API</Description>
     <PackageProjectUrl>https://github.com/RobertWildgoose/PoliceAPI_Client</PackageProjectUrl>
@@ -14,6 +14,7 @@
     <AssemblyVersion>1.0.6</AssemblyVersion>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <Product>PoliceApi_Client</Product>
   </PropertyGroup>
 
   <ItemGroup>
