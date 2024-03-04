@@ -1,4 +1,4 @@
-name: Release to NuGet v2
+name: Release to NuGet v2.5
 
 on:
   push:
