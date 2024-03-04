@@ -1,4 +1,5 @@
-﻿using PoliceAPI.Common.Models;
+﻿using ApiUtilities.Common.Models;
+using PoliceAPI.Common.Models;
 using PoliceAPI.Common.Models.Common;
 using PoliceAPI.Common.Models.Neighbourhood;
 using System;
@@ -11,12 +12,12 @@ namespace PoliceAPI.Common.Interfaces
 {
 	public interface INeighbourhoodService
 	{
-		public Task<List<Location>> GetNeighbourhoodBoundary(string force, string neighbourhoodId);
-		public Task<List<Event>> GetNeighbourhoodEvents(string force, string neighbourhoodId);
-		public Task<List<Priority>> GetNeighbourhoodPriorities(string force, string neighbourhoodId);
-		public Task<List<Identifier>> GetNeighbourhoods(string force);
-		public Task<List<TeamMember>> GetNeighbourhoodTeam(string force, string neighbourhoodId);
-		public Task<NeighbourhoodSummary> GetSpecificNeighbourhood(string force, string neighbourhoodId);
-		public Task<NeighbourhoodInfo> LocateNeighbourhood(string longitude, string latitude);
+		public Task<ResponseContainer<List<Location>>> GetNeighbourhoodBoundary(string force, string neighbourhoodId);
+		public Task<ResponseContainer<List<Event>>> GetNeighbourhoodEvents(string force, string neighbourhoodId);
+		public Task<ResponseContainer<List<Priority>>> GetNeighbourhoodPriorities(string force, string neighbourhoodId);
+		public Task<ResponseContainer<List<Identifier>>> GetNeighbourhoods(string force);
+		public Task<ResponseContainer<List<TeamMember>>> GetNeighbourhoodTeam(string force, string neighbourhoodId);
+		public Task<ResponseContainer<NeighbourhoodSummary>> GetSpecificNeighbourhood(string force, string neighbourhoodId);
+		public Task<ResponseContainer<NeighbourhoodInfo>> LocateNeighbourhood(string longitude, string latitude);
 	}
 }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PoliceAPI.Common", "..\src\PoliceAPI.Common\PoliceAPI.Common.csproj", "{7FD32FB2-0485-4900-BD85-1012D678E9D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PoliceAPI.Common", "src\PoliceAPI.Common\PoliceAPI.Common.csproj", "{F823268A-83B9-40E4-BC43-FDD719BDFB7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7FD32FB2-0485-4900-BD85-1012D678E9D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7FD32FB2-0485-4900-BD85-1012D678E9D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7FD32FB2-0485-4900-BD85-1012D678E9D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7FD32FB2-0485-4900-BD85-1012D678E9D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F823268A-83B9-40E4-BC43-FDD719BDFB7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F823268A-83B9-40E4-BC43-FDD719BDFB7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F823268A-83B9-40E4-BC43-FDD719BDFB7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F823268A-83B9-40E4-BC43-FDD719BDFB7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

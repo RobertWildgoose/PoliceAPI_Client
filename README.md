@@ -53,11 +53,5 @@ using PoliceDataApiWrapper.Services;
 var services = new ServiceCollection();
 
 // Add the PoliceDataApiClient to the service collection
-services.AddSingleton<PoliceDataApiClient>();
-
-// Add the services and their corresponding interfaces to the service collection
-services.AddScoped<ICrimeService, CrimeService>();
-services.AddScoped<IForceService, ForceService>();
-services.AddScoped<INeighbourhoodService, NeighbourhoodService>();
-services.AddScoped<IStopAndSearchService, StopAndSearchService>();
+services.AddSingleton<RegistrationContainer>();
 ```

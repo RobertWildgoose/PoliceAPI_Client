@@ -1,4 +1,5 @@
-﻿using PoliceAPI.Common.Models;
+﻿using ApiUtilities.Common.Models;
+using PoliceAPI.Common.Models;
 using PoliceAPI.Common.Models.Common;
 using System;
 using System.Collections.Generic;
@@ -10,10 +11,10 @@ namespace PoliceAPI.Common.Interfaces
 {
 	public interface ICrimeService
 	{
-		public Task<IEnumerable<StreetLevelCrimeResponse>> GetStreetLevelCrimes(Location coordinate, string date, string category = "all-crime");
-		public Task<IEnumerable<StreetLevelCrimeResponse>> GetStreetLevelCrimes(Polygon polygon, string date, string category = "all-crime");
-		public Task<IEnumerable<StreetLevelOutcomeResponse>> GetStreetLevelOutcomes(string date, string locationId);
-		public Task<IEnumerable<StreetLevelOutcomeResponse>> GetStreetLevelOutcomes(string date, Location coordinate);
-		public Task<IEnumerable<StreetLevelOutcomeResponse>> GetStreetLevelOutcomes(string date, Polygon polygon);
+		public Task<ResponseContainer<List<StreetLevelCrimeResponse>>> GetStreetLevelCrimes(Location coordinate, string date, string category = "all-crime");
+		public Task<ResponseContainer<List<StreetLevelCrimeResponse>>> GetStreetLevelCrimes(Polygon polygon, string date, string category = "all-crime");
+		public Task<ResponseContainer<List<StreetLevelOutcomeResponse>>> GetStreetLevelOutcomes(string date, string locationId);
+		public Task<ResponseContainer<List<StreetLevelOutcomeResponse>>> GetStreetLevelOutcomes(string date, Location coordinate);
+		public Task<ResponseContainer<List<StreetLevelOutcomeResponse>>> GetStreetLevelOutcomes(string date, Polygon polygon);
 	}
 }

@@ -1,4 +1,5 @@
-﻿using PoliceAPI.Common.Models;
+﻿using ApiUtilities.Common.Models;
+using PoliceAPI.Common.Models;
 using PoliceAPI.Common.Models.Force;
 using System;
 using System.Collections.Generic;
@@ -10,8 +11,8 @@ namespace PoliceAPI.Common.Interfaces
 {
 	public interface IForceService
 	{
-		public Task<List<Force>> GetForces();
-		public Task<ForceInfo> GetSpecificForce(string id);
-		public Task<List<Officer>> GetForceSeniorOfficers(string id);
+		public Task<ResponseContainer<List<Force>>> GetForces();
+		public Task<ResponseContainer<ForceInfo>> GetSpecificForce(string id);
+		public Task<ResponseContainer<List<Officer>>> GetForceSeniorOfficers(string id);
 	}
 }
