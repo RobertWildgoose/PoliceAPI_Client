@@ -4,8 +4,25 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>1.1.0</Version>
+    <Version>1.1.1</Version>
+    <Title>PoliceAPI.Common</Title>
+    <Authors>Robert Wildgoose</Authors>
+    <Company>Robert Wildgoose</Company>
+    <PackageIcon>icon.jpg</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/RobertWildgoose/PoliceAPI_Client</PackageProjectUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\icon.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="ApiUtilities.Common" Version="1.0.6" />
